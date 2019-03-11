@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 bash corpus2sgns.sh --cds 0.75 --win 5 --neg 15 --dim 300 files/coha.1860s output/1860
 bash corpus2sgns.sh --cds 0.75 --win 5 --neg 15 --dim 300 files/coha.1870s output/1870
 bash corpus2sgns.sh --cds 0.75 --win 5 --neg 15 --dim 300 files/coha.1880s output/1880
