@@ -63,7 +63,7 @@ def clear_embed_cache():
 import threading
 embed_lock = threading.Lock()
 
-EMBEDDING="embeddings/eng-all_sgns"
+EMBEDDING="embeddings/aligned"
 def load_embeddings(filename=None):
     if not filename:
         filename = EMBEDDING
@@ -77,7 +77,7 @@ def load_embeddings(filename=None):
 
         print "THIS MIGHT TAKE A WHILE..."
 
-        embeddings = SequentialEmbedding.load(filename, range(1840, 2000, 10))
+        embeddings = SequentialEmbedding.load(filename, range(1810, 1820, 10))
         print "LOAD EMBEDDINGS TOOK %s" % (time.time() - start)
 
         EMBED_CACHE[filename] = embeddings
